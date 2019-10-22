@@ -17,6 +17,7 @@ mongoose
     .connect(db)
     .then(() => console.log("mongoDB connected..."))
     .catch(err => console.log(err))
+    
     //connect to heroku later
     const port = process.env.PORT || 5000
 
