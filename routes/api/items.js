@@ -12,7 +12,16 @@ router.get('/', (req, res) => {
         .sort({ date: -1 })
         .then(items => res.json(items))
 });
-
+//@route POST api/items
+// @desc post all Items
+//@access Public
+router.post('/', (req, res) => {
+    const newItem = new Item({
+        name: req.body.name
+    });
+        
+    newItem.save().then(item => res.json(item));        
+});
 
 
 
